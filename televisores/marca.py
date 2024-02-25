@@ -1,6 +1,6 @@
 
 class Marca:
-    def __init__(self, nombre:str):
+    def __init__(self, nombre):
         self.__nombre = nombre
 
     @property
@@ -9,3 +9,7 @@ class Marca:
 
     def setNombre(self, new_nombre):
         self.__nombre = new_nombre
+
+
+
+marca
