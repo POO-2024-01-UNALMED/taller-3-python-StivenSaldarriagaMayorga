@@ -10,6 +10,3 @@ class Marca:
     def setNombre(self, new_nombre):
         self.__nombre = new_nombre
 
-
-
-marca
