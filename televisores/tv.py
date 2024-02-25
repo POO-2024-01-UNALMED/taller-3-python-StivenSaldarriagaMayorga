@@ -42,6 +42,10 @@ class TV:
     @classmethod
     def setNumTV(cls, numero):
          cls.numTV = numero
+    @classmethod
+    def getNumTv(cls):
+        return cls.numTV
+
    
     def getEstado(self):
         return self.__estado
