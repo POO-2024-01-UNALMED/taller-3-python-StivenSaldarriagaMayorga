@@ -7,5 +7,5 @@ class Marca:
     def getterNombre(self):
         return self.__nombre
 
-    def setterNombre(self, new_nombre):
+    def setNombre(self, new_nombre):
         self.__nombre = new_nombre
