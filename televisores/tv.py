@@ -9,34 +9,34 @@ class TV:
         self.__control = None   ##Con NONE se puede asignar despues el valor
         TV.numTV += 1
 #### Marca
-    def getterMarca(self):
+    def getMarca(self):
         return self.__marca
 
-    def setterMarca(self, new_marca):
+    def setMarca(self, new_marca):
         self.__marca = new_marca
 ####canal
-    def getterCanal(self):
+    def getCanal(self):
         return self.__canal
 
-    def setterCanal(self, new_canal):
+    def setCanal(self, new_canal):
         self.__canal = new_canal
 ####precio
-    def getterPrecio(self):
+    def getPrecio(self):
         return self.__precio
 
-    def setterPrecio(self, new_precio):
+    def setPrecio(self, new_precio):
         self.__precio = new_precio
 ####    volumen
-    def getterVolumen(self):
+    def getVolumen(self):
         return self.__volumen
 
-    def setterVolumen(self, new_volumen):
+    def setVolumen(self, new_volumen):
         self.__volumen = new_volumen
 ####    control
-    def getterControl(self):
+    def getControl(self):
         return self.__control
     
-    def setterControl(self, new_control):
+    def setControl(self, new_control):
         self.__control = new_control
     
     @classmethod

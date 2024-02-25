@@ -4,7 +4,7 @@ class Marca:
         self.__nombre = nombre
 
     @property
-    def getterNombre(self):
+    def getNombre(self):
         return self.__nombre
 
     def setNombre(self, new_nombre):
