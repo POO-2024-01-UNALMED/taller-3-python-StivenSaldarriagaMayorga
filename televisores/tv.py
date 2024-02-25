@@ -40,8 +40,9 @@ class TV:
         self.__control = new_control
     
     @classmethod
-    def set_numTV(cls):
+    def setNumTV(cls):
         return cls.numTV
+   
     def getEstado(self):
         return self.__estado
 

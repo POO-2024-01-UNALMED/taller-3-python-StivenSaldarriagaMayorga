@@ -40,4 +40,4 @@ class Control:
 
     def enlazar(self, tv):
         self.__tv = tv
-        tv.setContol(self)
+        tv.setControl(self)
