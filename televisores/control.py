@@ -1,8 +1,12 @@
+from televisores.tv import *
 
 class Control:
-    def __init__(self, tv=None):
+    def __init__(self, tv=TV):
         self.__tv=tv
 
+    def enlazar(self, tv:TV):
+        self.__tv = tv
+        tv.setControl(self)
 
     def getTv(self):
         return self.__tv
@@ -11,7 +15,7 @@ class Control:
         self.__tv = new_tv
     
     def canalDown(self):
-        self.__tv.setCanal()
+        self.__tv = self.__tv.getCanal -1
         
     def canalUp(self):
         while 1 <= self.__tv.canal <=120:
@@ -34,7 +38,4 @@ class Control:
                 self.__tv.volumen -= 1
             else:
                 print("Está apagado")
-
-    def enlazar(self, tv):
-        self.__tv = tv
-        tv.setControl(self)
+   
