@@ -40,7 +40,7 @@ class TV:
         self.__control = new_control
     
     @classmethod
-    def setNumTV(cls, numero):
+    def setNumTv(cls, numero):
          cls.numTV = numero
     @classmethod
     def getNumTv(cls):
