@@ -3,11 +3,11 @@ class Control:
     def __init__(self, tv=None):
         self.__tv=tv
 
-    @property
-    def tv(self):
+
+    def getTv(self):
         return self.__tv
-    @tv.setter
-    def tv(self, new_tv):
+
+    def setTv(self, new_tv):
         self.__tv = new_tv
     
     def canalDown(self):
