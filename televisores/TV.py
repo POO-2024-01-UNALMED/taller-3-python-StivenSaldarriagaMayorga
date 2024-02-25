@@ -1,4 +1,4 @@
-class TV:
+class tv:
     numTV = 0
     def __init__(self, marca, estado:bool):
         self.__marca = marca
@@ -7,7 +7,7 @@ class TV:
         self.__estado = estado
         self.__volumen = 1
         self.__control = None   ##Con NONE se puede asignar despues el valor
-        TV.numTV += 1
+        tv.numTV += 1
 #### Marca
     def getterMarca(self):
         return self.__marca

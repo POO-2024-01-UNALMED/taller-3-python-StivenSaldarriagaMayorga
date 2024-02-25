@@ -1,5 +1,5 @@
 
-class Control:
+class control:
     def __init__(self, tv):
         self.__tv=tv
 
