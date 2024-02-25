@@ -38,6 +38,6 @@ class Control:
             else:
                 print("Está apagado")
 
-    def enlazar(self, tv: tv):
+    def enlazar(self, tv):
         self.__tv = tv
         tv.setContol(self)
