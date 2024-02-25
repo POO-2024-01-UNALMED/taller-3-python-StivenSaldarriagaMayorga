@@ -1,6 +1,6 @@
 
 class Control:
-    def __init__(self, tv):
+    def __init__(self, tv=None):
         self.__tv=tv
 
     @property
