@@ -43,7 +43,7 @@ class TV:
     def setNumTV(cls, numero):
          cls.numTV = numero
     @classmethod
-    def getNumTv(cls):
+    def getNumTV(cls):
         return cls.numTV
 
    
