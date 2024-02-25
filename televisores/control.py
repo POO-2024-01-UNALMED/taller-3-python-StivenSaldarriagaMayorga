@@ -38,11 +38,6 @@ class Control:
             else:
                 print("Está apagado")
 
-    def enlazar(self, tv):
-        if self.__tv is not None:
-            self.__tv.control = None
-        
+    def enlazar(self, tv: tv):
         self.__tv = tv
-
-        if tv is not None:
-            tv.control = self
+        tv.setContol(self)
