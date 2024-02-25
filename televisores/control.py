@@ -11,11 +11,8 @@ class Control:
         self.__tv = new_tv
     
     def canalDown(self):
-        while 1 <= self.__tv.control <=120: 
-            if self.__tv.estado is True:
-                self.__tv.control -= 1
-            else:
-                print("Está apagado")
+        self.__tv.setCanal()
+        
     def canalUp(self):
         while 1 <= self.__tv.canal <=120:
             if self.__tv.estado is True:
