@@ -28,17 +28,6 @@ class TV:
     def setPrecio(self, new_precio):
         self.__precio = new_precio
 ####    volumen
-    def getVolumen(self):
-        return self.__volumen
-
-    def setVolumen(self, new_volumen):
-        self.__volumen = new_volumen
-####    control
-    def getControl(self):
-        return self.__control
-    
-    def setControl(self, new_control):
-        self.__control = new_control
     
     @classmethod
     def setNumTV(cls, numero):
@@ -47,11 +36,10 @@ class TV:
     def getNumTV(cls):
         return cls.numTV
 
-   
     def getEstado(self):
         return self.__estado
 
-
+##############################################################################
     def turnOn(self):
         if self.__estado is False:
             self.__estado = True
@@ -65,27 +53,25 @@ class TV:
             self.__estado = False
 
     def canalDown(self):
-        self.__tv = self.__tv.getCanal -1
-        while 1 <= self.__tv.canal <=120:
-            if self.__tv.estado is True:
-                self.__tv.canal += 1
+        self.__canal = self.__canal - 1
     
     def canalUp(self):
-        while 1 <= self.__tv.canal <=120:
-            if self.__tv.estado is True:
-                self.__tv.canal += 1
+         self.__canal = self.__canal - 1
 
     def volumenUp(self):
-         while 0 <= self.__tv.volumen <= 7:  
-            if self.__tv.estado is True:
-                self.__tv.volumen += 1
-            else:
-                print("Está apagado")
+         pass
     
     def volumenDown(self):
-         while 0 <= self.__tv.volumen <= 7:  
-            if self.__tv.estado is True:
-                self.__tv.volumen -= 1
-            else:
-                print("Está apagado")
-   
+         pass
+
+    def getVolumen(self):
+        return self.__volumen
+
+    def setVolumen(self, new_volumen):
+        self.__volumen = new_volumen
+####    control
+    def getControl(self):
+        return self.__control
+    
+    def setControl(self, new_control):
+        self.__control = new_control

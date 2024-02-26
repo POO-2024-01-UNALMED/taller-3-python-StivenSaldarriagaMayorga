@@ -13,7 +13,8 @@ class Control:
 
     def setTv(self, new_tv):
         self.__tv = new_tv
-    
+
+#############################################################
     def canalDown(self):
         self.__tv.canalDown()
     
@@ -26,3 +27,16 @@ class Control:
     def volumenDown(self):
          self.__tv.canalDown()
    
+    def getCanal(self):
+        self.__tv.getCanal()
+
+    def setCanal(self, new_canal):
+        self.__tv.setCanal(new_canal)
+
+    def getVolumen(self):
+        self.__tv.getVolumen()
+
+    def setVolumen(self, new_volumen):
+        self.__tv.setVolumen(new_volumen)
+
+
