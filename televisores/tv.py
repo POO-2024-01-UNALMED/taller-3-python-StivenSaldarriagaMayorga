@@ -63,3 +63,29 @@ class TV:
             self.__estado = False
         else:
             self.__estado = False
+
+    def canalDown(self):
+        self.__tv = self.__tv.getCanal -1
+        while 1 <= self.__tv.canal <=120:
+            if self.__tv.estado is True:
+                self.__tv.canal += 1
+    
+    def canalUp(self):
+        while 1 <= self.__tv.canal <=120:
+            if self.__tv.estado is True:
+                self.__tv.canal += 1
+
+    def volumenUp(self):
+         while 0 <= self.__tv.volumen <= 7:  
+            if self.__tv.estado is True:
+                self.__tv.volumen += 1
+            else:
+                print("Está apagado")
+    
+    def volumenDown(self):
+         while 0 <= self.__tv.volumen <= 7:  
+            if self.__tv.estado is True:
+                self.__tv.volumen -= 1
+            else:
+                print("Está apagado")
+   

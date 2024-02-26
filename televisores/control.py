@@ -15,27 +15,14 @@ class Control:
         self.__tv = new_tv
     
     def canalDown(self):
-        self.__tv = self.__tv.getCanal -1
-        
+        self.__tv.canalDown()
+    
     def canalUp(self):
-        while 1 <= self.__tv.canal <=120:
-            if self.__tv.estado is True:
-                self.__tv.canal += 1
-            else:
-                print("Está apagado")
-
+        self.__tv.canalUp()
 
     def volumenUp(self):
-         while 0 <= self.__tv.volumen <= 7:  
-            if self.__tv.estado is True:
-                self.__tv.volumen += 1
-            else:
-                print("Está apagado")
+         self.__tv.canalDown()
     
     def volumenDown(self):
-         while 0 <= self.__tv.volumen <= 7:  
-            if self.__tv.estado is True:
-                self.__tv.volumen -= 1
-            else:
-                print("Está apagado")
+         self.__tv.canalDown()
    
