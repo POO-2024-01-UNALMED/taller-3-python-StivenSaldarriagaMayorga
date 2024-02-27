@@ -39,4 +39,8 @@ class Control:
     def setVolumen(self, new_volumen):
         self.__tv.setVolumen(new_volumen)
 
+    def turnOff(self):
+        self.__tv.turnOff(self)
 
+    def turnOn(self):
+        self.__tv.turnOn(self)
