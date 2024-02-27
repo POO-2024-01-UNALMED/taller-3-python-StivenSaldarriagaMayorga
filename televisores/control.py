@@ -16,16 +16,20 @@ class Control:
 
 #############################################################
     def canalDown(self):
-        self.__tv.canalDown()
+       if self.__tv:
+            self.__tv.canalDown()
     
     def canalUp(self):
-        self.__tv.canalUp()
+        if self.__tv:
+            self.__tv.canalUp()
 
     def volumenUp(self):
-         self.__tv.canalDown()
+         if self.__tv:
+            self.__tv.volumenUp()
     
     def volumenDown(self):
-         self.__tv.canalDown()
+         if self.__tv:
+            self.__tv.volumenDown()
    
     def getCanal(self):
         self.__tv.getCanal()
@@ -40,7 +44,9 @@ class Control:
         self.__tv.setVolumen(new_volumen)
 
     def turnOff(self):
-        self.__tv.turnOff(self)
+        if self.__tv:
+            self.__tv.turnOff()
 
     def turnOn(self):
-        self.__tv.turnOn(self)
+        if self.__tv:
+            self.__tv.turnOff()
