@@ -1,11 +1,10 @@
-from televisores.tv import *
 
 class Control:
     def __init__(self):
         self.__tv=None
 
 
-    def enlazar(self, tv:TV):
+    def enlazar(self, tv):
         self.__tv = tv
         tv.setControl(self)
 
@@ -25,7 +24,7 @@ class Control:
             self.__tv.canalUp()
 
     def volumenUp(self):
-         if self.__tv:
+
             self.__tv.volumenUp()
     
     def volumenDown(self):
@@ -46,9 +45,7 @@ class Control:
         self.__tv.setVolumen(new_volumen)
 
     def turnOff(self):
-        if self.__tv:
             self.__tv.turnOff()
 
     def turnOn(self):
-        if self.__tv:
             self.__tv.turnOff()

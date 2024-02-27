@@ -67,11 +67,11 @@ class TV:
             self.__canal -= 1
 
     def volumenUp(self):
-        if self.__estado and self.__volumen < 7:
+        if self.__estado and self.__volumen < 7 and self.__volumen >= 0:
             self.__volumen += 1
     
     def volumenDown(self):
-        if self.__estado and self.__volumen > 0:
+        if self.__estado and self.__volumen > 0 and self.__volumen <= 7:
             self.__volumen -= 1
 
 ####    control
