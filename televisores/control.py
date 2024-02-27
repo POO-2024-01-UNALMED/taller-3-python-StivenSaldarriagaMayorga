@@ -4,6 +4,7 @@ class Control:
     def __init__(self):
         self.__tv=None
 
+
     def enlazar(self, tv:TV):
         self.__tv = tv
         tv.setControl(self)
@@ -50,3 +51,7 @@ class Control:
     def turnOn(self):
         if self.__tv:
             self.__tv.turnOff()
+
+    def setControl(self, control):
+        if self.__tv:
+            self.__tv.setControl(control)
