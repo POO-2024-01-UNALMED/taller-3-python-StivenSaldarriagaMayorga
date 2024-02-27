@@ -1,78 +1,84 @@
 class TV:
     numTV = 0
-    def __init__(self, marca, estado:bool):
-        self.__marca = marca
-        self.__canal = 1
-        self.__precio = 500
-        self.__estado = estado
-        self.__volumen = 1
-        self.__control = None   ##Con NONE se puede asignar despues el valor
+
+    def __init__(self, marca, estado):
+        self.marca = marca
+        self.estado = estado
+        self.canal = 1
+        self.volumen = 1
+        self.precio = 500
+        self.control = None
+
         TV.numTV += 1
-###Get
-    def getEstado(self):
-        return self.__estado
 
-    def getControl(self):
-        return self.__control
-    
-    def getMarca(self):
-        return self.__marca
+    # Métodos get
+    def get_marca(self):
+        return self.marca
 
-    def getPrecio(self):
-        return self.__precio
+    def get_canal(self):
+        return self.canal
 
-    def getCanal(self):
-        return self.__canal
+    def get_precio(self):
+        return self.precio
 
-    def getVolumen(self):
-        return self.__volumen
-##set
+    def get_volumen(self):
+        return self.volumen
 
-    
-    @classmethod
-    def setNumTV(cls, numero):
-         cls.numTV = numero
-    @classmethod
-    def getNumTV(cls):
-        return cls.numTV
-    def setCanal(self, new_canal):
-        if self.__estado is True and 1 < new_canal <= 120:
-            self.__canal = new_canal
+    def get_control(self):
+        return self.control
 
-    def setPrecio(self, new_precio):
-        self.__precio = new_precio
+    def get_estado(self):
+        return self.estado
 
-    def setControl(self, new_control):
-        self.__control = new_control
+    @staticmethod
+    def get_num_tv():
+        return TV.numTV
 
-    def setVolumen(self, volumen):
-        if 0 <= volumen <= 7 and self.__estado is True:
-            self.__volumen = volumen
+    # Métodos set
+    def set_marca(self, marca):
+        self.marca = marca
 
-    def setMarca(self, new_marca):
-        self.__marca = new_marca
-##############################################################################
-    def turnOn(self):
-        self.__estado = True
+    def set_canal(self, canal):
+        if self.estado:
+            if 1 <= canal <= 120:
+                self.canal = canal
 
-    def turnOff(self):
-        self.__estado = False
+    def set_volumen(self, volumen):
+        if self.estado:
+            if 0 <= volumen <= 7:
+                self.volumen = volumen
 
-    def canalUp(self):
-        if self.__estado and self.__canal < 120 and self.__canal >= 1:
-            self.__canal += 1
+    def set_precio(self, precio):
+        self.precio = precio
 
-    def canalDown(self):
-        if self.__estado and self.__canal > 1 and self.__canal <= 120:
-            self.__canal -= 1
+    def set_control(self, control):
+        self.control = control
 
-    def volumenUp(self):
-        if self.__estado is True and self.__volumen < 7 and self.__volumen >= 0:
-            self.__volumen += 1
-    
-    def volumenDown(self):
-        if self.__estado is True and self.__volumen > 0 and self.__volumen <= 7:
-            self.__volumen -= 1
+    @staticmethod
+    def set_num_tv(num_tv):
+        TV.numTV = num_tv
 
+    # Métodos controladores
+    def turn_off(self):
+        self.estado = False
+
+    def turn_on(self):
+        self.estado = True
+
+    def canal_up(self):
+        if self.estado and self.canal < 120:
+            self.canal += 1
+
+    def canal_down(self):
+        if self.estado and self.canal > 1:
+            self.canal -= 1
+
+    def volumen_down(self):
+        if self.estado and self.volumen > 0:
+            self.volumen -= 1
+
+    def volumen_up(self):
+        if self.estado and self.volumen < 7:
+            self.volumen += 1
 ####    control
     
